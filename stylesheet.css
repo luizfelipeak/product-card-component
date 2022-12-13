@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?&family=Montserrat:wght@500;700&family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root {
+    --color-primary: hsl(158, 36%, 37%);
+    --color-primary-hover: hsl(158, 25%, 20%);
+
+    --color-font: hsl(228, 12%, 48%);
+    --color-font-dark: hsl(212, 21%, 14%);
+
+    --color-white: hsl(0, 0%, 100%);
+    --background: hsl(30, 38%, 92%);
+
+    --ff-title: 'Fraunces', serif;
+    --ff-body: 'Montserrat', sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    min-height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
+
+    background-color: var(--background);
+    position: relative;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+}
+
+.card {
+    display: grid;
+    font-size: 14px;
+    font-family: var(--ff-body);
+
+    color: var(--color-font);
+    background-color: var(--color-white);
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.card__content {
+    display: grid;
+    align-content: space-around;
+    gap: 0.75rem;
+    margin: 1.5rem;
+}
+
+.card__tag {
+    letter-spacing: 5px;
+}
+
+.card__title {
+    font-size: 1.85rem;
+    font-family: var(--ff-title);
+    line-height: 1.1;
+    color: var(--color-font-dark);
+}
+
+.card__pricetag {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card__pricetag__discount {
+    font-size: 1.75rem;
+    font-family: var(--ff-title);
+    color: var(--color-primary);
+}
+
+.card__pricetag__full {
+    font-family: var(--ff-body);
+    text-decoration: line-through;
+}
+
+.card__btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 1rem;
+    font-family: var(--ff-body);
+    font-weight: 700;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border: none;
+
+    padding: 1rem;
+    border-radius: 0.5em;
+}
+
+.card__btn:hover,
+.card__btn:focus-visible {
+    background-color: var(--color-primary-hover);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 1rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 43.75em) {
+    .card {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 50rem;
+    }
+
+    .card__content {
+        gap: 0.5rem;
+        margin-inline: 2.5rem;
+    }
+
+    .card__tag {
+        font-size: 1.1rem;
+    }
+
+    .card__title {
+        font-size: 2.75rem;
+        line-height: 1;
+    }
+
+    .card__description {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .card__pricetag {
+        gap: 1.5rem;
+    }
+
+    .card__pricetag__discount {
+        font-size: 2.75rem;
+    }
+
+    .card__pricetag__full {
+        font-size: 1.2rem;
+    }
+
+    .card__btn {
+        font-size: 1.1rem;
+        padding: 1.25rem 1rem;
+    }
+
+    .card__btn svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
