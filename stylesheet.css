@@ -30,6 +30,10 @@ picture {
     display: block;
 }
 
+main {
+    position: relative;
+}
+
 body {
     display: grid;
     align-items: center;
@@ -39,7 +43,6 @@ body {
     padding: 1rem;
 
     background-color: var(--background);
-    position: relative;
 }
 
 .visually-hidden {
@@ -121,10 +124,9 @@ body {
     background-color: var(--color-primary-hover);
 }
 
-.attribution {
+footer {
     position: absolute;
     bottom: 1rem;
-    text-align: center;
 }
 
 .attribution a {
