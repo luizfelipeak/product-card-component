@@ -30,6 +30,22 @@ picture {
     display: block;
 }
 
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 main {
     position: relative;
 }
@@ -127,6 +143,7 @@ body {
 .card__btn:hover,
 .card__btn:focus-visible {
     background-color: var(--color-primary-hover);
+    transition: background-color 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 
 footer {
@@ -136,6 +153,10 @@ footer {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+.attribution a:visited {
+  color: hsl(270, 100%, 60%);
 }
 
 @media (min-width: 43.75em) {
