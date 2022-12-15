@@ -1,33 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?&family=Montserrat:wght@500;700&family=Fraunces:opsz,wght@9..144,700&display=swap');
 
 :root {
-    --color-primary: hsl(158, 36%, 37%);
-    --color-primary-hover: hsl(158, 25%, 20%);
+  --color-primary: hsl(158, 36%, 37%);
+  --color-primary-hover: hsl(158, 25%, 20%);
 
-    --color-font: hsl(228, 12%, 48%);
-    --color-font-dark: hsl(212, 21%, 14%);
+  --color-font: hsl(228, 12%, 48%);
+  --color-font-dark: hsl(212, 21%, 14%);
 
-    --color-white: hsl(0, 0%, 100%);
-    --background: hsl(30, 38%, 92%);
+  --color-white: hsl(0, 0%, 100%);
+  --background: hsl(30, 38%, 92%);
 
-    --ff-title: 'Fraunces', serif;
-    --ff-body: 'Montserrat', sans-serif;
+  --ff-title: 'Fraunces', serif;
+  --ff-body: 'Montserrat', sans-serif;
 }
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -47,112 +47,116 @@ picture {
 }
 
 main {
-    position: relative;
+  position: relative;
 }
 
 body {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    min-height: 100vh;
-    gap: 1rem;
-    padding: 1rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+  gap: 1rem;
+  padding: 1rem;
 
-    background-color: var(--background);
+  background-color: var(--background);
 }
 
 .visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
 }
 
 .card {
-    display: grid;
-    font-size: 14px;
-    font-family: var(--ff-body);
+  display: grid;
+  font-size: 14px;
+  font-family: var(--ff-body);
 
-    color: var(--color-font);
-    background-color: var(--color-white);
-    border-radius: 0.75em;
-    overflow: hidden;
+  color: var(--color-font);
+  background-color: var(--color-white);
+  border-radius: 0.75em;
+  overflow: hidden;
 }
 
 .card__content {
-    display: grid;
-    align-content: space-around;
-    gap: 0.75rem;
-    margin: 1.5rem;
+  display: grid;
+  align-content: space-around;
+  gap: 0.75rem;
+  margin: 1.5rem;
 }
 
 .card__tag {
-    font-size: 0.75rem;
-    letter-spacing: 5px;
+  font-size: 0.75rem;
+  letter-spacing: 5px;
 }
 
 .card__title {
-    font-size: 1.85rem;
-    font-family: var(--ff-title);
-    line-height: 1.1;
-    color: var(--color-font-dark);
+  font-size: 1.85rem;
+  font-family: var(--ff-title);
+  line-height: 1.1;
+  color: var(--color-font-dark);
 }
 
 .card__description {
-    line-height: 1.6;
+  line-height: 1.6;
 }
 
 .card__pricetag {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .card__pricetag__discount {
-    font-size: 2rem;
-    font-family: var(--ff-title);
-    color: var(--color-primary);
+  font-size: 2rem;
+  font-family: var(--ff-title);
+  color: var(--color-primary);
 }
 
 .card__pricetag__full {
-    font-family: var(--ff-body);
-    text-decoration: line-through;
+  font-family: var(--ff-body);
+  text-decoration: line-through;
 }
 
 .card__btn {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
 
-    font-size: 1rem;
-    font-family: var(--ff-body);
-    font-weight: 700;
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    border: none;
+  font-size: 1rem;
+  font-family: var(--ff-body);
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
 
-    padding: 1rem;
-    border-radius: 0.5em;
+  padding: 1rem;
+  border-radius: 0.5em;
 }
 
 .card__btn:hover,
 .card__btn:focus-visible {
-    background-color: var(--color-primary-hover);
-    transition: background-color 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
+  background-color: var(--color-primary-hover);
+  transition: background-color 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 
 footer {
-    position: absolute;
-    bottom: 1rem;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.attribution {
+  font-size: 11px;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
 }
 
 .attribution a:visited {
@@ -160,27 +164,27 @@ footer {
 }
 
 @media (min-width: 43.75em) {
-    .card {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 37.5rem;
-    }
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 37.5rem;
+  }
 
-    .card__content {
-        gap: 1rem;
-        margin: 1.5rem 2rem;
-    }
+  .card__content {
+    gap: 1rem;
+    margin: 1.5rem 2rem;
+  }
 
-    .card__title {
-        font-size: 2rem;
-        line-height: 1;
-    }
+  .card__title {
+    font-size: 2rem;
+    line-height: 1;
+  }
 
-    .card__btn svg {
-        width: 1rem;
-        height: 1rem;
-    }
+  .card__btn svg {
+    width: 1rem;
+    height: 1rem;
+  }
 
-    .card__btn {
-        font-size: 0.9rem;
-    }
+  .card__btn {
+    font-size: 0.9rem;
+  }
 }
